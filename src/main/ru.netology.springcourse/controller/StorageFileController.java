@@ -1,25 +1,23 @@
 package controller;
-
+import exception.BadCredentialsException;
+import jakarta.annotation.Resource;
+import logger.LogStatus;
+import logger.Logger;
+import logger.SimpleLogger;
 import lombok.AllArgsConstructor;
+import model.dtos.FileNameEditRequest;
+import model.dtos.ResponseForGetAllFiles;
+import model.entities.StorageFile;
+import model.entities.User;
 import org.springframework.core.io.ByteArrayResource;
-import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import ru.netology.cloud_service.exception.BadCredentialsException;
-import ru.netology.cloud_service.logger.LogStatus;
-import ru.netology.cloud_service.logger.Logger;
-import ru.netology.cloud_service.logger.SimpleLogger;
-import ru.netology.cloud_service.model.dtos.request.FileNameEditRequest;
-import ru.netology.cloud_service.model.dtos.response.ResponseForGetAllFiles;
-import ru.netology.cloud_service.model.entities.StorageFile;
-import ru.netology.cloud_service.model.entities.User;
-import ru.netology.cloud_service.service.AuthenticationService;
-import ru.netology.cloud_service.service.StorageFileService;
-import ru.netology.cloud_service.service.UserService;
+import service.AuthenticationService;
+import service.StorageFileService;
+import service.UserService;
 
-import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
@@ -62,7 +60,7 @@ public class StorageFileController {
         StorageFile file = storageFileService.fileDownload(user, filename);
         return ResponseEntity.ok()
                 .header("Content-Type", "multipart/form-data")
-                .body(new ByteArrayResource(file.getFileContent()));
+                .body((Resource) new ByteArrayResource(file.getFileContent()));
     }
 
     @PutMapping("/file")

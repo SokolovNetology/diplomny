@@ -32,7 +32,7 @@ public class AuthenticationService {
             ));
         } catch (BadCredentialsException e) {
             logger.log(LogStatus.ERROR, "Bad credentials: Uncorrected login or password");
-            throw new ru.netology.springcourse.exception.BadCredentialsException(
+            throw new ru.netology.springcourse.exeption.BadCredentialsException(
                     "Bad credentials: Uncorrected login or password"
             );
         }
