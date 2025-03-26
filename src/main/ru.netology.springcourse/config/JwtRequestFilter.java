@@ -1,24 +1,23 @@
 package config;
 
 import io.jsonwebtoken.ExpiredJwtException;
-import io.jsonwebtoken.SignatureException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import logger.LogStatus;
+import logger.Logger;
+import logger.SimpleLogger;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-import ru.netology.cloud_service.logger.LogStatus;
-import ru.netology.cloud_service.logger.Logger;
-import ru.netology.cloud_service.logger.SimpleLogger;
-import ru.netology.cloud_service.utils.JWT.JwtTokenUtil;
+import ru.netology.springcourse.JwtTokenUtil;
 
 import java.io.IOException;
+import java.security.SignatureException;
 import java.util.stream.Collectors;
 
 @Component

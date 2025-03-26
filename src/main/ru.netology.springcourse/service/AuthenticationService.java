@@ -1,19 +1,16 @@
 package service;
 
+import logger.LogStatus;
+import logger.Logger;
+import logger.SimpleLogger;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.stereotype.Service;
-import ru.netology.cloud_service.logger.LogStatus;
-import ru.netology.cloud_service.logger.Logger;
-import ru.netology.cloud_service.logger.SimpleLogger;
-import ru.netology.cloud_service.model.dtos.request.JwtRequest;
-import ru.netology.cloud_service.model.dtos.response.JwtResponse;
-import ru.netology.cloud_service.model.entities.User;
-import ru.netology.cloud_service.repository.AuthenticationRepository;
-import ru.netology.cloud_service.utils.JWT.JwtTokenUtil;
+import repository.AuthenticationRepository;
+import ru.netology.springcourse.JwtTokenUtil;
 
 @Service
 @RequiredArgsConstructor
@@ -35,7 +32,7 @@ public class AuthenticationService {
             ));
         } catch (BadCredentialsException e) {
             logger.log(LogStatus.ERROR, "Bad credentials: Uncorrected login or password");
-            throw new ru.netology.cloud_service.exception.BadCredentialsException(
+            throw new ru.netology.springcourse.exception.BadCredentialsException(
                     "Bad credentials: Uncorrected login or password"
             );
         }

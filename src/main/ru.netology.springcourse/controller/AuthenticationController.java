@@ -1,11 +1,13 @@
 package controller;
 
 import lombok.RequiredArgsConstructor;
+import model.dtos.JwtRequest;
+import model.dtos.JwtResponse;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import ru.netology.cloud_service.model.dtos.request.JwtRequest;
-import ru.netology.cloud_service.model.dtos.response.JwtResponse;
-import ru.netology.springcourse.service.AuthenticationService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import service.AuthenticationService;
 
 @RestController
 @RequiredArgsConstructor

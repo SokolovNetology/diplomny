@@ -5,10 +5,9 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.RequiredArgsConstructor;
+import model.entities.User;
 import org.springframework.stereotype.Component;
 import org.springframework.beans.factory.annotation.Value;
-import ru.netology.cloud_service.model.entities.Role;
-import ru.netology.cloud_service.model.entities.User;
 
 
 import java.time.Duration;

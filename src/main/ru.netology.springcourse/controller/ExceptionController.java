@@ -1,14 +1,15 @@
 package controller;
 
+import exception.BadCredentialsException;
+import exception.DeleteFileException;
+import exception.InputDataException;
+import exception.UploadFileException;
+import model.dtos.ExceptionResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import ru.netology.cloud_service.exception.BadCredentialsException;
-import ru.netology.cloud_service.exception.DeleteFileException;
-import ru.netology.cloud_service.exception.InputDataException;
-import ru.netology.cloud_service.exception.UploadFileException;
-import ru.netology.cloud_service.model.dtos.response.ExceptionResponse;
+import ru.netology.springcourse;
 
 @RestControllerAdvice
 public class ExceptionController {
