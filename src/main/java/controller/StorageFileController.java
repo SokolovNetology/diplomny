@@ -1,23 +1,25 @@
 package controller;
-import exception.BadCredentialsException;
-import jakarta.annotation.Resource;
-import logger.LogStatus;
-import logger.Logger;
-import logger.SimpleLogger;
+
 import lombok.AllArgsConstructor;
-import model.dtos.FileNameEditRequest;
-import model.dtos.ResponseForGetAllFiles;
-import model.entities.StorageFile;
-import model.entities.User;
 import org.springframework.core.io.ByteArrayResource;
+import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import exception.BadCredentialsException;
+import logger.LogStatus;
+import logger.Logger;
+import logger.SimpleLogger;
+import model.dtos.FileNameEditRequest;
+import model.dtos.ResponseForGetAllFiles;
+import model.entities.StorageFile;
+import model.entities.User;
 import service.AuthenticationService;
 import service.StorageFileService;
 import service.UserService;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
@@ -60,7 +62,7 @@ public class StorageFileController {
         StorageFile file = storageFileService.fileDownload(user, filename);
         return ResponseEntity.ok()
                 .header("Content-Type", "multipart/form-data")
-                .body((Resource) new ByteArrayResource(file.getFileContent()));
+                .body(new ByteArrayResource(file.getFileContent()));
     }
 
     @PutMapping("/file")

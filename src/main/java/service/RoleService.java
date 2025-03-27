@@ -1,9 +1,9 @@
 package service;
 
 import lombok.RequiredArgsConstructor;
+import model.entities.Role;
 import org.springframework.stereotype.Service;
-import ru.netology.cloud_service.model.entities.Role;
-import ru.netology.cloud_service.repository.RoleRepository;
+import repository.RoleRepository;
 
 import java.util.Optional;
 

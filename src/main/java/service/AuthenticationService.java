@@ -4,6 +4,7 @@ import logger.LogStatus;
 import logger.Logger;
 import logger.SimpleLogger;
 import lombok.RequiredArgsConstructor;
+import model.entities.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -32,7 +33,7 @@ public class AuthenticationService {
             ));
         } catch (BadCredentialsException e) {
             logger.log(LogStatus.ERROR, "Bad credentials: Uncorrected login or password");
-            throw new ru.netology.springcourse.exeption.BadCredentialsException(
+            throw new java.exception.BadCredentialsException(
                     "Bad credentials: Uncorrected login or password"
             );
         }
