@@ -45,7 +45,6 @@ public class StorageFileService {
                     .dateAndTime(LocalDateTime.now())
                     .fileSize(fileContent.getSize())
                     .fileContent(fileContent.getBytes())
-                    .user(user)
                     .build());
             logger.log(
                     LogStatus.INFO,
