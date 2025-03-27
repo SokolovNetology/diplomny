@@ -15,10 +15,9 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-import ru.netology.springcourse.JwtTokenUtil;
+import application.JwtTokenUtil;
 
 import java.io.IOException;
-import java.security.SignatureException;
 import java.util.stream.Collectors;
 
 @Component

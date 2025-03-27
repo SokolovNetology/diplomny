@@ -1,4 +1,4 @@
-package ru.netology.springcourse;
+package application;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

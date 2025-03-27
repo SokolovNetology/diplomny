@@ -11,7 +11,7 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.stereotype.Service;
 import repository.AuthenticationRepository;
-import ru.netology.springcourse.JwtTokenUtil;
+import application.JwtTokenUtil;
 
 @Service
 @RequiredArgsConstructor

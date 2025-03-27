@@ -1,4 +1,4 @@
-package ru.netology.springcourse;
+package application;
 
 
 import io.jsonwebtoken.Claims;

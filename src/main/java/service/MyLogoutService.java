@@ -6,11 +6,11 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
-import ru.netology.cloud_service.logger.LogStatus;
-import ru.netology.cloud_service.logger.Logger;
-import ru.netology.cloud_service.logger.SimpleLogger;
-import ru.netology.cloud_service.repository.AuthenticationRepository;
-import ru.netology.cloud_service.utils.JWT.JwtTokenUtil;
+import logger.LogStatus;
+import logger.Logger;
+import logger.SimpleLogger;
+import repository.AuthenticationRepository;
+import utils.JWT.JwtTokenUtil;
 import org.springframework.security.web.authentication.logout.LogoutHandler;
 
 @Service
