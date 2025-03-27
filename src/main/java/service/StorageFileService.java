@@ -4,15 +4,15 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
-import ru.netology.cloud_service.exception.DeleteFileException;
-import ru.netology.cloud_service.exception.InputDataException;
-import ru.netology.cloud_service.exception.UploadFileException;
-import ru.netology.cloud_service.logger.LogStatus;
-import ru.netology.cloud_service.logger.Logger;
-import ru.netology.cloud_service.logger.SimpleLogger;
-import ru.netology.cloud_service.model.entities.StorageFile;
-import ru.netology.cloud_service.model.entities.User;
-import ru.netology.cloud_service.repository.StorageFileRepository;
+import exception.DeleteFileException;
+import exception.InputDataException;
+import exception.UploadFileException;
+import logger.LogStatus;
+import logger.Logger;
+import logger.SimpleLogger;
+import model.entities.StorageFile;
+import model.entities.User;
+import repository.StorageFileRepository;
 
 
 import java.io.IOException;
