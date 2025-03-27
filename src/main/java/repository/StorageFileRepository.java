@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import ru.netology.cloud_service.model.entities.StorageFile;
-import ru.netology.cloud_service.model.entities.User;
+import model.entities.StorageFile;
+import model.entities.User;
 
 import java.util.List;
 

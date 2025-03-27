@@ -33,7 +33,7 @@ public class AuthenticationService {
             ));
         } catch (BadCredentialsException e) {
             logger.log(LogStatus.ERROR, "Bad credentials: Uncorrected login or password");
-            throw new java.exception.BadCredentialsException(
+            throw new exception.BadCredentialsException(
                     "Bad credentials: Uncorrected login or password"
             );
         }
