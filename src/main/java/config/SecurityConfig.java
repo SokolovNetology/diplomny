@@ -35,6 +35,16 @@ public class SecurityConfig {
     private final MyLogoutService logoutService;
     private final JwtRequestFilter jwtRequestFilter;
 
+    public SecurityConfig(Boolean credentials, String headers, JwtRequestFilter jwtRequestFilter, MyLogoutService logoutService, String methods, String origins, UserService userService) {
+        this.credentials = credentials;
+        this.headers = headers;
+        this.jwtRequestFilter = jwtRequestFilter;
+        this.logoutService = logoutService;
+        this.methods = methods;
+        this.origins = origins;
+        this.userService = userService;
+    }
+
     @Value("${cors.credentials}")
     private Boolean credentials;
 
