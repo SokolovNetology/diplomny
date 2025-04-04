@@ -2,16 +2,16 @@ package service;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.core.Authentication;
-import org.springframework.stereotype.Service;
 import logger.LogStatus;
 import logger.Logger;
 import logger.SimpleLogger;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.web.authentication.logout.LogoutHandler;
+import org.springframework.stereotype.Service;
 import repository.AuthenticationRepository;
 import utils.JWT.JwtTokenUtil;
-import org.springframework.security.web.authentication.logout.LogoutHandler;
 
 @Service
 @RequiredArgsConstructor

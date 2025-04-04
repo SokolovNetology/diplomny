@@ -1,8 +1,12 @@
 package model.entities;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.apache.catalina.User;
+
 import java.time.LocalDateTime;
 
 @AllArgsConstructor
