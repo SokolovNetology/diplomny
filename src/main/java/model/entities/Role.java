@@ -6,9 +6,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-@Entity
+
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 @Data
 @Table(name = "roles", schema = "cloud_service")
 public class Role {
